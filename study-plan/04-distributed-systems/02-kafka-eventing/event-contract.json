@@ -1,0 +1,15 @@
+{
+  "event_id": "018f6e2b-8f72-7dc1-9a92-78731f5ca171",
+  "event_type": "payment.authorized",
+  "schema_version": 2,
+  "occurred_at": "2026-08-09T06:30:12.481Z",
+  "producer": "payment-service",
+  "tenant_id": "tenant-42",
+  "aggregate": { "type": "payment", "id": "pay-90017", "version": 7 },
+  "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+  "data": {
+    "amount_minor": 125000,
+    "currency": "INR",
+    "authorization_code": "AUTH-71A4"
+  }
+}

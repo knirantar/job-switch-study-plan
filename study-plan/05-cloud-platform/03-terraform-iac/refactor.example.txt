@@ -1,0 +1,11 @@
+# Rename without destroy/create. Keep this moved block for supported upgrade paths.
+moved {
+  from = terraform_data.service["web"]
+  to   = terraform_data.service["api"]
+}
+
+# Declarative import is reviewed in plan/apply; real Azure resource address/ID shown as shape.
+import {
+  to = azurerm_resource_group.platform
+  id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-platform-prod"
+}

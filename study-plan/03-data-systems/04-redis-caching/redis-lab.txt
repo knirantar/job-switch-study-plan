@@ -1,0 +1,22 @@
+# Redis CLI lab; run against a disposable Redis instance.
+# Cache entry atomically with a five-minute TTL:
+SET patient:42 '{"version":7,"name":"Asha"}' EX 300 NX
+TTL patient:42
+
+# Observe actual encoded memory (environment/version dependent):
+MEMORY USAGE patient:42 SAMPLES 5
+INFO memory
+INFO stats
+
+# Atomic rate limiter for 100 requests per 60-second fixed window (Lua):
+EVAL "local n=redis.call('INCR',KEYS[1]); if n==1 then redis.call('PEXPIRE',KEYS[1],ARGV[1]) end; return n" 1 rate:tenant42:20260809T1200 60000
+
+# Single-instance lease acquisition. Value must be a unique owner token:
+SET lock:model:m1 7f6c1a4e-1d45-4f3d-b9ad-20a8b94e77e5 NX PX 30000
+
+# Compare-and-delete release (never DEL another owner's lease):
+EVAL "if redis.call('GET',KEYS[1])==ARGV[1] then return redis.call('DEL',KEYS[1]) else return 0 end" 1 lock:model:m1 7f6c1a4e-1d45-4f3d-b9ad-20a8b94e77e5
+
+# Configure only in a disposable instance after understanding consequences:
+# CONFIG SET maxmemory 100mb
+# CONFIG SET maxmemory-policy allkeys-lfu

@@ -1,0 +1,27 @@
+{
+  "role_assignments": [
+    {
+      "principal": "api-prod-mi",
+      "role": "secrets-reader",
+      "scope": "/subscriptions/sub-42/resourceGroups/rg-prod/providers/Microsoft.KeyVault/vaults/kv-prod"
+    },
+    {
+      "principal": "deploy-prod-oidc",
+      "role": "app-deployer",
+      "scope": "/subscriptions/sub-42/resourceGroups/rg-prod"
+    }
+  ],
+  "roles": {
+    "secrets-reader": ["Microsoft.KeyVault/vaults/secrets/read"],
+    "app-deployer": [
+      "Microsoft.Web/sites/read",
+      "Microsoft.Web/sites/write",
+      "Microsoft.Web/sites/slots/read",
+      "Microsoft.Web/sites/slots/write"
+    ]
+  },
+  "network_flows": [
+    {"source": "10.42.1.0/24", "destination": "10.42.3.4/32", "protocol": "tcp", "port": 443},
+    {"source": "10.42.2.0/24", "destination": "10.42.4.0/24", "protocol": "tcp", "port": 5432}
+  ]
+}

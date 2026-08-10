@@ -1,0 +1,29 @@
+# Generated language/runtime artifacts
+*.class
+*.py[cod]
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Terraform local state and providers
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# IDE and operating-system files
+.DS_Store
+.idea/
+.vscode/
+/tmp/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx

@@ -1,0 +1,29 @@
+{
+  "run_id": "claims-risk-2026-08-09-001",
+  "code_commit": "8c34a8c48cecb18b9da42b7b4768d8a86e21b451",
+  "environment_digest": "sha256:741eac3d94074ca839607adc8c587aefa3c1e92e92fe042a41eafb728af14c31",
+  "dataset": {
+    "uri": "azureml://datastores/curated/paths/claims/snapshot_date=2026-07-31/",
+    "sha256": "79715fa6c153c6131bc2678f7ee08d57b6180c0b7993521c630f75d07f51ec23",
+    "as_of": "2026-07-31T23:59:59Z"
+  },
+  "splits": {
+    "train": ["C1001", "C1002", "C1003", "C1004", "C1005", "C1006"],
+    "validation": ["C1007", "C1008"],
+    "test": ["C1009", "C1010"]
+  },
+  "seed": 20260809,
+  "feature_schema": {
+    "age": "int64[18,100]",
+    "prior_claims": "int64[0,50]",
+    "amount": "float64[0,1000000]"
+  },
+  "metrics": {"test_auc": 0.918, "test_brier": 0.094, "fairness_tpr_gap": 0.041},
+  "gates": {"min_test_auc": 0.90, "max_test_brier": 0.11, "max_fairness_tpr_gap": 0.05},
+  "model": {
+    "artifact_path": "model.json",
+    "sha256": "2df46e7e8e3ac1a63f23c23aea744eced44eb2d96c6350b645ce30692d7e1d30",
+    "registry_uri": "models:/claims-risk/17"
+  },
+  "approval": {"status": "approved", "reviewer_role": "model-risk-reviewer", "ticket": "MRM-4821"}
+}

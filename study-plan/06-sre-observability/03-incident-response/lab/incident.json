@@ -1,0 +1,35 @@
+{
+  "id": "INC-2026-0819",
+  "severity": "SEV-1",
+  "title": "Claims API cross-region authorization failures",
+  "declared_at": "2026-08-09T10:04:00Z",
+  "resolved_at": "2026-08-09T10:49:00Z",
+  "roles": {
+    "incident_commander": "oncall-sre-a",
+    "operations_lead": "claims-lead-b",
+    "communications_lead": "support-lead-c",
+    "scribe": "platform-eng-d"
+  },
+  "impact": {
+    "start": "2026-08-09T09:58:00Z",
+    "end": "2026-08-09T10:43:00Z",
+    "summary": "7,812 of 182,440 valid requests failed authorization in West India; no cross-tenant access detected"
+  },
+  "updates": [
+    {"at": "2026-08-09T10:04:00Z", "state": "DECLARED", "message": "Incident declared; change freeze active"},
+    {"at": "2026-08-09T10:14:00Z", "state": "INVESTIGATING", "message": "Impact isolated to West India after identity rollout"},
+    {"at": "2026-08-09T10:24:00Z", "state": "MITIGATING", "message": "Rolling back federated credential change"},
+    {"at": "2026-08-09T10:34:00Z", "state": "MONITORING", "message": "Authorization success recovered; watching 10-minute SLO window"},
+    {"at": "2026-08-09T10:44:00Z", "state": "MONITORING", "message": "No new failures; audit query confirms tenant isolation"},
+    {"at": "2026-08-09T10:49:00Z", "state": "RESOLVED", "message": "Service and authorization invariant verified"}
+  ],
+  "evidence": [
+    "dashboard://claims-api/slo?from=2026-08-09T09:50Z",
+    "query://audit/cross-tenant-access-zero/INC-2026-0819",
+    "change://identity-rollout/CHG-8421"
+  ],
+  "actions": [
+    {"id": "ACT-1", "owner": "identity-team", "due": "2026-08-16", "status": "OPEN", "verification": "staging negative-claim test blocks wrong region"},
+    {"id": "ACT-2", "owner": "claims-team", "due": "2026-08-18", "status": "OPEN", "verification": "regional authorization SLI dashboard and page exercise"}
+  ]
+}
