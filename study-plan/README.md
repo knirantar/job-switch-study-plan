@@ -3,7 +3,7 @@
 This repository turns the 12-week roadmap into a topic-by-topic course. Study parent topics in numeric order. Inside each parent, study child topics in numeric order unless its README says otherwise.
 
 Run `python3 validate_curriculum.py` from this directory to verify the complete
-40-lesson structure, exercise counts, answer-key placement and local links.
+47-lesson structure, exercise counts, answer-key placement and local links.
 The latest full test evidence is recorded in [Repository Validation](VALIDATION.md).
 
 The standard applied to every topic is defined in the [Curriculum Completion Contract](COMPLETION-CONTRACT.md). The coverage table there is the source of truth; a scaffolded directory is not considered complete.

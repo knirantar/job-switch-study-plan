@@ -75,8 +75,8 @@ def main() -> int:
                 lessons.append(lesson)
             else:
                 errors.append(f"missing {lesson.relative_to(ROOT)}")
-    if len(lessons) != 40:
-        errors.append(f"expected 40 lessons, found {len(lessons)}")
+    if len(lessons) != 47:
+        errors.append(f"expected 47 lessons, found {len(lessons)}")
     for lesson in lessons:
         for error in validate_lesson(lesson):
             errors.append(f"{lesson.relative_to(ROOT)}: {error}")

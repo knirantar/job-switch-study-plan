@@ -4,6 +4,8 @@
 
 Build a Spring Boot payment API that is correct under retries, concurrent requests, dependency failures and container memory limits. Use Java 21+ and PostgreSQL. The capstone is evidence of engineering judgment, not a CRUD demo.
 
+Before implementation, demonstrate the prerequisite foundation: explain Java value/reference semantics, equality/hash and generic variance; show a reproducible Maven/Gradle build; trace one HTTP request through validation/controller/service/repository; and explain JPA transient/managed/detached/removed states, dirty checking, flush and one N+1 repair.
+
 ## Functional contract
 
 - `POST /v1/payments` accepts tenant-scoped idempotency key and payment command.
