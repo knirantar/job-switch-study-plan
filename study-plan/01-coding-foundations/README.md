@@ -6,14 +6,17 @@ You should be able to turn an unfamiliar problem into a correct Java solution, j
 
 ## Prerequisites
 
-- Java syntax, methods, classes and generics at a basic level
-- A JDK (17 or newer is preferred)
-- Paper/notebook for traces and invariants
+- No prior data-structures or interview-preparation knowledge is assumed.
+- Install a JDK (17 or newer is preferred); the first lesson explains the edit–compile–run loop.
+- Keep paper or a notebook for traces and invariants.
 
 ## Child sequence
 
 | # | Child topic | Exit criterion |
 |---|---|---|
+| 0A | [Programming Logic and Debugging from Scratch](09-programming-logic-debugging/lesson.md) | Translate a requirement into executable steps and debug it systematically |
+| 0B | [Recursion, Searching and Sorting from Scratch](10-recursion-searching-sorting/lesson.md) | Trace recursion and implement foundational search/sort algorithms |
+| 0C | [Discrete Math and Bit Manipulation](11-discrete-math-bit-manipulation/lesson.md) | Apply the small amount of math and binary reasoning used in coding rounds |
 | 1 | [Complexity Analysis](01-complexity-analysis/lesson.md) | Derive—not guess—time and auxiliary space |
 | 2 | [Arrays and Strings](02-arrays-and-strings/lesson.md) | Manipulate contiguous data and indices safely |
 | 3 | [Hashing and Sets](03-hashing-and-sets/lesson.md) | Use lookup/counting/deduplication with correct key semantics |
@@ -25,8 +28,9 @@ You should be able to turn an unfamiliar problem into a correct Java solution, j
 | — | [Practice set](practice/problems.md) | ≥80% correct; medium problems ≤35 minutes |
 | — | [Integrated capstone](CAPSTONE.md) | ≥80/100 and successful oral defense |
 
-## Four-week micro-plan (24 hours)
+## Five-week micro-plan (30 hours)
 
+- Week 0 (6h): programming logic, debugging, recursion, searching, sorting, discrete math and bits.
 - Week A (6h): complexity, arrays, strings; 8 drills.
 - Week B (6h): hashing, linked structures, stacks/queues; 8 drills.
 - Week C (6h): trees, heaps, graphs; 8 drills.
@@ -36,7 +40,7 @@ If fitting this into the original roadmap, do Weeks A+B during roadmap week 1 an
 
 ## Parent completion gate
 
-Coding Foundations is complete only after all eight child exit tests, two consecutive timed-medium successes, the practice diagnostic at 80% or higher, and the integrated capstone at 80/100 or higher. Keep failed cases in the mistake log and repeat them after 1, 3, 7 and 14 days.
+Coding Foundations is complete only after all eleven child exit tests, two consecutive timed-medium successes, the practice diagnostic at 80% or higher, and the integrated capstone at 80/100 or higher. Keep failed cases in the mistake log and repeat them after 1, 3, 7 and 14 days.
 
 ## Interview answer template
 

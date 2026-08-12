@@ -4,6 +4,10 @@
 
 Build and defend a production-grade claims-risk and claims-summary platform spanning a typed Python API, leakage-safe training, immutable ML lifecycle, online serving and a retrieval-assisted LLM path. The capstone passes only with executable evidence; a notebook, architecture diagram or dashboard alone is insufficient.
 
+## Prerequisite gate
+
+Complete all ten lessons first. Create an isolated Python environment and package; demonstrate syntax, mutability, collections, functions, exceptions, classes, iterators and context managers; run formatting, typing and unit tests; and load/validate a real CSV-shaped dataset. Calculate mean, variance, probability, a gradient step, confusion-matrix metrics and a train/validation/test split by hand or executable code. Finally, explain tokens, embeddings, attention, transformer inference and retrieval-augmented generation, including one groundedness and one access-control failure. This gate makes the advanced lifecycle depend on Python fluency and ML/GenAI foundations rather than framework recipes.
+
 ## Product contract
 
 - A Java claims service calls a Python risk endpoint at 600 RPS peak; availability is 99.9%, p95 ≤150 ms and p99 ≤300 ms.

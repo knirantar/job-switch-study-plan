@@ -4,6 +4,10 @@
 
 Design and demonstrate an Azure platform that releases a Java inference API and Python model worker to AKS for healthcare and fintech tenants. An evaluator must be able to trace one production pod back to reviewed source, immutable image digest, provenance, Terraform plan, workload identity and permitted network flows. The deliverable is executable evidence and recovery practice, not a diagram alone.
 
+## Prerequisite gate
+
+Complete all nine lessons first. Navigate Linux, inspect processes/files/permissions, connect commands safely and diagnose a failed service; create a Git repository, branch, commit, merge and repair a conflict without losing history; explain compute/storage/network/IAM and shared responsibility; and draw a cloud request path through DNS, routing, subnets, security controls, load balancing and private endpoints. Run the prerequisite shell and policy labs from a clean checkout. Kubernetes, Terraform and CI/CD work begins only after these operating-system, version-control and cloud-network foundations are reproducible.
+
 ## Workload and constraints
 
 - 18 million API requests/day; measured peak factor 6; payload p50 2 KiB and p99 48 KiB.

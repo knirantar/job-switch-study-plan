@@ -6,6 +6,10 @@ Design and prototype a platform that receives model-deployment requests from fin
 
 The deliverable is an evidence-backed architecture and failure harness, not only a diagram.
 
+## Prerequisite gate
+
+Complete all seven lessons first. Trace a request through DNS, TCP/TLS, HTTP and a server handler; calculate latency and throughput from supplied measurements; compare synchronous HTTP/RPC with asynchronous messaging; and implement a tiny client/server exchange that handles timeout, retry and duplicate delivery. Explain process versus host, partial failure, clocks, ordering, replication, consistency and consensus vocabulary with a concrete failure timeline. This gate prevents advanced Kafka and architecture work from hiding gaps in networking or distributed-systems fundamentals.
+
 ## Product contract
 
 - `POST /v1/deployments` accepts tenant-scoped idempotency key and immutable model digest.

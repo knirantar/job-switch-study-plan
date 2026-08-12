@@ -4,6 +4,10 @@
 
 Design, implement and defend a shared platform that routes insurance claims, exchanges authorized clinical evidence, posts approved payments and serves GPU-based model/LLM inference. Prove security/privacy/audit, domain correctness, accelerator capacity and tenant economics together. A diagram or compliance checklist alone does not pass.
 
+## Prerequisite gate
+
+Complete all nine lessons first. Produce a basic threat model and show authentication, authorization, encryption, secret handling and audit boundaries; classify sample healthcare/financial fields and assign purpose, consent, retention and deletion rules; explain a claim, payment and clinical-data flow using exact money and versioned records; derive CPU/GPU/memory/storage quantities from hardware units; and calculate per-tenant quota and cost allocation that conserves the total. Run the security, privacy, domain, accelerator and multitenancy prerequisite labs before attempting the combined platform.
+
 ## Product and risk contract
 
 - 60 healthcare/insurance tenants; three regulated high-tier tenants receive dedicated stamps, 57 use pooled stamps of at most 20 tenants.

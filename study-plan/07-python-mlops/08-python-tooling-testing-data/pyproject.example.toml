@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claims-ml-study-example"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["numpy>=2,<3", "pandas>=2.2,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9", "mypy>=1.11,<2", "ruff>=0.6,<1"]

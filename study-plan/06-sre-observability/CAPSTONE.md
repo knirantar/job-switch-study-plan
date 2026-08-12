@@ -4,6 +4,10 @@
 
 Operate a multi-region claims-risk inference platform through normal load, a bad release, a zone disruption and a regional disaster. Produce executable SLO, telemetry, incident and recovery evidence proving user outcomes, data/model correctness, privacy and achieved capacity/RPO/RTO. Dashboards and architecture diagrams alone do not pass.
 
+## Prerequisite gate
+
+Complete all seven lessons first. Operate a small service using a runbook, health checks, logs and a safe deploy/rollback; distinguish fault, failure, availability, reliability, durability and resilience; calculate uptime, error rate, latency percentiles and a basic SLI/SLO/error budget; and build one actionable threshold alert from a bounded metric. Demonstrate a short incident timeline with detection, mitigation, verification and follow-up. This gate establishes production operations, reliability vocabulary and monitoring mechanics before multi-window burn rates and disaster exercises.
+
 ## Product and workload contract
 
 - 43.2 million logical prediction requests/day, measured 6× peak-to-average: derive 3,000 RPS forecast peak.

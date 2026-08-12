@@ -6,6 +6,10 @@ Design and implement the PostgreSQL/Redis data layer for a service that stores p
 
 Use PostgreSQL 18 where available. Redis is optional for execution but its interface/failure tests are required. Generate at least 10 million synthetic payments locally if resources permit; otherwise use one million and explicitly explain which plan/capacity conclusions cannot be extrapolated.
 
+## Prerequisite gate
+
+Complete all eight lessons before implementation. Create a database and least-privilege role from a clean PostgreSQL installation, restore a backup into a disposable database, and explain the server/database/schema/table/row hierarchy. Build normalized customer/payment tables with keys and constraints; execute and explain `SELECT`, filtering, joins, grouping, subqueries, CTEs, transactions and window functions; and diagnose one failed connection and one slow query using server logs and `EXPLAIN`. The advanced store must rest on repeatable setup and SQL fluency, not GUI-only familiarity.
+
 ## Functional contract
 
 - Every row is tenant-scoped; cross-tenant account/patient references are impossible through database constraints.

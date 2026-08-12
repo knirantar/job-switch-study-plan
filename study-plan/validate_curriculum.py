@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent
 SECTION = re.compile(r"^## (10|[1-9])\.", re.MULTILINE)
 PROBLEM = re.compile(r"^### (?:(?:Worked )?Problem|[0-9]+\. Problem)", re.MULTILINE)
 NUMBERED = re.compile(r"^[0-9]+\.", re.MULTILINE)
+RESOURCE_ITEM = re.compile(r"^(?:[0-9]+\.|-)\s+", re.MULTILINE)
 LINK = re.compile(r"(?<!!)\[[^]]+\]\(([^)]+)\)")
 
 
@@ -41,7 +42,7 @@ def validate_lesson(path: Path) -> list[str]:
     practice = len(NUMBERED.findall(between(text, "## 8.", "## 9.")))
     if not 6 <= practice <= 10:
         errors.append(f"practice count {practice}, expected 6..10")
-    resources = len(NUMBERED.findall(between(text, "## 9.", "## 10.")))
+    resources = len(RESOURCE_ITEM.findall(between(text, "## 9.", "## 10.")))
     if resources < 1:
         errors.append("no numbered curated resources")
     bridges = len(NUMBERED.findall(between(text, "## 10.", "---ANSWER KEY BELOW---")))
@@ -75,8 +76,8 @@ def main() -> int:
                 lessons.append(lesson)
             else:
                 errors.append(f"missing {lesson.relative_to(ROOT)}")
-    if len(lessons) != 47:
-        errors.append(f"expected 47 lessons, found {len(lessons)}")
+    if len(lessons) != 73:
+        errors.append(f"expected 73 lessons, found {len(lessons)}")
     for lesson in lessons:
         for error in validate_lesson(lesson):
             errors.append(f"{lesson.relative_to(ROOT)}: {error}")

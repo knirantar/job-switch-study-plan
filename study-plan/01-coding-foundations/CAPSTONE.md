@@ -1,5 +1,9 @@
 # Coding Foundations Capstone — Production Event Analyzer
 
+## Prerequisite gate
+
+Complete all eleven lessons before starting. From a clean checkout, compile and run a small Java program without an IDE, explain variables/control flow/method calls, debug one malformed input, and write tests for boundary values. Then implement one recursive routine with a stated base case, binary search, one comparison sort, and one bit-mask operation. For each implementation, derive time and auxiliary-space complexity rather than quoting it from memory. This gate ensures the analyzer is built on programming fluency, debugging discipline, recursion/search/sort mechanics and discrete-math/bit foundations—not only memorized data-structure patterns.
+
 ## Scenario
 
 Build a Java command-line analyzer for request events. Each event has:

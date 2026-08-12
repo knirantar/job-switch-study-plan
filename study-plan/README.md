@@ -3,7 +3,7 @@
 This repository turns the 12-week roadmap into a topic-by-topic course. Study parent topics in numeric order. Inside each parent, study child topics in numeric order unless its README says otherwise.
 
 Run `python3 validate_curriculum.py` from this directory to verify the complete
-47-lesson structure, exercise counts, answer-key placement and local links.
+73-lesson structure, exercise counts, answer-key placement and local links.
 The latest full test evidence is recorded in [Repository Validation](VALIDATION.md).
 
 The standard applied to every topic is defined in the [Curriculum Completion Contract](COMPLETION-CONTRACT.md). The coverage table there is the source of truth; a scaffolded directory is not considered complete.
@@ -25,7 +25,7 @@ For every child topic:
 
 1. Take the diagnostic without notes.
 2. Read the lesson and reproduce every worked example on paper.
-3. Type the Java examples yourself; do not copy/paste on the first attempt.
+3. Type the Java, Python, SQL, and shell examples yourself; do not copy/paste on the first attempt.
 4. Solve the drills with a 35-minute timer.
 5. Compare with solutions only after recording complexity and edge cases.
 6. Explain one solution aloud as if interviewing.
